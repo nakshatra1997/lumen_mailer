@@ -16,13 +16,6 @@ use Illuminate\Support\Facades\Mail;
 $app->get('/', function () use ($app) {
     return $app->version();
 });
-$app->post('/send','MailController@send');
+$app->get('/send','MailController@send');
 
-//$app->get('/send2', function () {
-////    return $app->welcome();
-//  $data="sending mail";
-//    Mail::send(['html'=>'mail'],[] ,function($msg) {
-//
-//        $msg->to(['email id']); $msg->from(['your_email@email.com']); });
-//    return 'lortyrtytyo...';
-//});
+
